@@ -26,7 +26,7 @@ const App = () => {
         </stack.Navigator>
       </NavigationContainer>
     </>
-  )
+  );
 };
 
 const styles = StyleSheet.create({
