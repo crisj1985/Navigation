@@ -4,7 +4,12 @@ import { Text, View, Button, StyleSheet } from 'react-native';
 const Index = ({navigation}) => {
 
   const irNosotros = () => {
-    navigation.navigate("Nosotros");
+    navigation.navigate('Nosotros', cliente);
+  };
+    
+  const cliente = {
+    clienteId:6330,
+    totalPagar:500
   };
 
   return (

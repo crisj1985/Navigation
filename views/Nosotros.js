@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
 import { Text, View, Button, StyleSheet } from 'react-native';
 
-const Nosotros = ({ navigation }) => {
+const Nosotros = ({ navigation,route }) => {
+
   const volver = () => {
     navigation.goBack();
     // navigation.push('Inicio');
   };
 
+  const {clienteId} = route.params;
+
   return (
     <View styles={styles.contenedor}>
-      <Text>Nosotros</Text>
+      <Text>{clienteId}</Text>
       <Button title="Volver" onPress={() => volver()} />
     </View>
   );
