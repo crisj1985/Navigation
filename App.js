@@ -22,11 +22,17 @@ const App = () => {
       <NavigationContainer>
         <stack.Navigator initialRouteName="Inicio">
           <stack.Screen name="Inicio" component={Inicio} />
-          <stack.Screen name="Nosotros" component={Nosotros} />
+          <stack.Screen
+            name="Nosotros"
+            component={Nosotros}
+            options={({ route }) => ({
+              title: route.params.clienteId
+            })}
+          />
         </stack.Navigator>
       </NavigationContainer>
     </>
-  );
+  )
 };
 
 const styles = StyleSheet.create({
